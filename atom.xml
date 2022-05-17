@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-07T13:07:01.838Z</updated>
+  <updated>2022-05-17T09:12:26.608Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>TekesRunner</title>
+    <link href="http://example.com/2022/05/17/TekesRunner/"/>
+    <id>http://example.com/2022/05/17/TekesRunner/</id>
+    <published>2022-05-17T09:12:03.000Z</published>
+    <updated>2022-05-17T09:12:26.608Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="项目名称"><a href="#项目名称" class="headerlink" title="项目名称"></a>项目名称</h1><p>执行tekes ci插件的执行器，类比actions/runner（<a href="https://github.com/actions/runner%EF%BC%89">https://github.com/actions/runner）</a></p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><strong>linux</strong><br>curl -O -L <a href="https://tekes-actions.cdn.bcebos.com/runner/tekes-runner-linux.zip">https://tekes-actions.cdn.bcebos.com/runner/tekes-runner-linux.zip</a><br>cd tekes-runner-linux<br><strong>osx</strong><br>curl -O -L <a href="https://tekes-actions.cdn.bcebos.com/runner/tekes-runner-osx.zip">https://tekes-actions.cdn.bcebos.com/runner/tekes-runner-osx.zip</a><br>cd tekes-runner-osx</p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p><strong>CI环境</strong><br>./tekes-runner config –url <a href="https://tekes.baidu-int.com/:app_name/:platform/:pipeline">https://tekes.baidu-int.com/:app_name/:platform/:pipeline</a> –id :workflow_id</p><p>例如</p><blockquote><p>./tekes-runner config –url <a href="https://tekes.baidu-int.com/baiduboxapp/ios/publish">https://tekes.baidu-int.com/baiduboxapp/ios/publish</a> –id 12345678</p></blockquote><p><strong>本地环境</strong><br>./tekes-runner config –url file://data/:yml</p><p>例如<br>[前提条件] data/baiduboxapp/ios/publish.yml 文件存在</p><blockquote><p>./tekes-runner config –url file://data/baiduboxapp/ios/publish.yml</p></blockquote><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p><strong>CI环境</strong><br>./tekes-runner run<br>或者<br>./tekes-runner run –trigger $TEKES_TOKEN</p><p><strong>本地环境（需要Tekes后端联调）</strong><br>./tekes-runner run –trigger :tekes_token</p><p>例如<br>[前提条件] 6f4b3661-1e0e-4727-b4fc-53a9e66d603d 可以通过Tekes后端兑换 trigger</p><blockquote><p>./tekes-runner run –trigger 6f4b3661-1e0e-4727-b4fc-53a9e66d603d</p></blockquote><p><strong>本地环境（不需要Tekes后端联调）</strong><br>./tekes-runner run –trigger data/:json</p><p>例如<br>[前提条件] data/event.json 文件存在</p><blockquote><p>./tekes-runner run –trigger data/event.json</p></blockquote><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>如何执行自动化测试</p><h2 id="如何贡献"><a href="#如何贡献" class="headerlink" title="如何贡献"></a>如何贡献</h2><p>贡献patch流程、质量要求</p><h2 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h2><p>百度Golang交流群：1450752</p><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="http://wiki.baidu.com/pages/viewpage.action?pageId=515622823">百度golang代码库组织和引用指南</a><br><a href="http://wiki.baidu.com/pages/viewpage.action?pageId=917601678">百度内Go Module使用指南</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;项目名称&quot;&gt;&lt;a href=&quot;#项目名称&quot; class=&quot;headerlink&quot; title=&quot;项目名称&quot;&gt;&lt;/a&gt;项目名称&lt;/h1&gt;&lt;p&gt;执行tekes ci插件的执行器，类比actions/runner（&lt;a href=&quot;https://github.com/</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Gradle</title>
     <link href="http://example.com/2022/05/07/Gradle/"/>
     <id>http://example.com/2022/05/07/Gradle/</id>
     <published>2022-05-07T08:56:53.000Z</published>
-    <updated>2022-05-07T13:07:01.838Z</updated>
+    <updated>2022-05-09T12:14:03.707Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="maven组件区间版本号"><a href="#maven组件区间版本号" class="headerlink" title="maven组件区间版本号"></a>maven组件区间版本号</h2><p>TODO:</p><ol><li>问题与痛点</li><li>maven组件版本选择机制</li><li>方案</li></ol><h2 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h2><h3 id="Gradle-Dependency-Management"><a href="#Gradle-Dependency-Management" class="headerlink" title="Gradle Dependency Management"></a>Gradle Dependency Management</h3><p><a href="https://docs.gradle.org/6.1.1/userguide/core_dependency_management.html">Gradle6.1.1 Dependency Management文档</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="maven组件区间版本号"><a href="#maven组件区间版本号" class="headerlink" title="maven组件区间版本号"></a>maven组件区间版本号</h2><p>TODO:</p><ol><li>问题与痛点</li><li>maven组件版本选择机制</li><li>方案</li></ol><h2 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h2><h3 id="Gradle-Dependency-Management"><a href="#Gradle-Dependency-Management" class="headerlink" title="Gradle Dependency Management"></a>Gradle Dependency Management</h3><p><a href="https://docs.gradle.org/6.1.1/userguide/core_dependency_management.html">Gradle6.1.1 Dependency Management文档</a></p><h3 id="ResolutionStrategy"><a href="#ResolutionStrategy" class="headerlink" title="ResolutionStrategy"></a>ResolutionStrategy</h3><p>Defines the strategies around dependency resolution. For example, forcing certain dependency versions, substitutions, conflict resolutions or snapshot timeouts.<br>Seems the key needed to achieve goals.</p><h3 id="Capability"><a href="#Capability" class="headerlink" title="Capability"></a>Capability</h3><p>用group:name:StableVersion 作为Capability名称，用以检测基线版本冲突</p><h3 id="Gradle-Module-Metadata"><a href="#Gradle-Module-Metadata" class="headerlink" title="Gradle Module Metadata"></a>Gradle Module Metadata</h3><p>**.module文件，Gradle专用。发布到maven时，maven所用的pom.xml文件中，通过注释中的Gradle标记，来告诉Gradle，该模块有更好的Gradle专用的Gradle Module Metadata文件。</p><h3 id="完整性检查Test-Case"><a href="#完整性检查Test-Case" class="headerlink" title="完整性检查Test Case"></a>完整性检查Test Case</h3><ol><li>Provided Module A: 1.0.72–&gt;1.0.73，去掉接口，导致不能向前兼容</li><li>Consumer Module B: 依赖A1.0.72版本发布1.0.73，同时使用了A在1.0.73中被去掉的接口<br>两个组件同时配置1.0.73，进行完整性检查，检查不通过，报A中1.0.73已去掉的接口找不到</li></ol>]]></content>
     
     
       
